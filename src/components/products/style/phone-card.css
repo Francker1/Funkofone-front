@@ -1,0 +1,14 @@
+
+.card-maker{
+
+    position: absolute;
+    right: 0;
+    margin: 5px;
+    padding: 5px;
+    background: orange;
+    border-radius: 2px;
+}
+
+.card-body{
+    text-align: center;
+}
