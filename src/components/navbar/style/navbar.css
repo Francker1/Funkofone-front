@@ -7,7 +7,7 @@ nav a:hover{
     color: var(--accent-color);
 }
 
-.funko-nav_brand a, .funko-nav_links a{
+.funko-nav_brand a{
 
     color: var(--white-color);
     transition: 0.2s;
@@ -16,14 +16,4 @@ nav a:hover{
 .funko-nav_brand a{
 
     font-size: 1.3rem;
-}
-
-.funko-nav_links .btn-link{
-    background-color: var(--accent-color);
-}
-
-.funko-nav_links .btn-link:hover{
-    background-color: var(--accent-color-dark);
-    color: var(--white-color);
-    text-decoration: none;
 }

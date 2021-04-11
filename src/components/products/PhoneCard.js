@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col, Row, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import BtnBubble from '../buttons/bubble/BtnBubble';
+import { Col, Card } from 'react-bootstrap';
 
 import './style/phone-card.css';
+import BtnLinkDefault from '../buttons/default/BtnLinkDefault';
 
 const PhoneCard = (props) => {
   return (
@@ -14,18 +13,17 @@ const PhoneCard = (props) => {
         <h6 className="card-maker">Apple</h6>
         <Card.Body>
           <h4>Phone Name</h4>
-          <p>This is a wider card with supporting text below as a natural lead-in to additional.</p>
           <p>color: white</p>
           <h5>50,00 €</h5>
         </Card.Body>
-        <Row>
-          <Col>
-            <Link to="/phones/edit/15">Editar</Link>
+        <div className="d-flex mb-3 card-buttons">
+          <Col sm={6}>
+            <BtnLinkDefault url="/phones/edit/15" text="Edit" className="btn w-100" outlined />
           </Col>
-          <Col>
-            <BtnBubble url="/phones/15" text="Details" />
+          <Col sm={6}>
+            <BtnLinkDefault url="/phones/15" text="Details" className="btn w-100" />
           </Col>
-        </Row>
+        </div>
         <Card.Footer>
           <small className="text-muted">ID phone: 0001</small>
         </Card.Footer>
