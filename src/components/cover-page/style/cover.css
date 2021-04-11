@@ -12,7 +12,7 @@
 
 .cover-img{
     background-image: url("../../../images/funkofone-cover.jpg");
-    background-position: center;
+    background-position: initial;
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(100vh);
