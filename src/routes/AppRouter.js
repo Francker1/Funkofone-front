@@ -9,6 +9,8 @@ const AppRouter = () => {
       <Switch>
         <Route exact path="/" component={Cover} />
         <Route exact path="/phones/" component={PhoneList} />
+        <Route exact path="/phones/:id" />
+        <Route exact path="/phones/edit/:id" />
         <Route exact path="/new/" />
         <Redirect to="/" />
       </Switch>
