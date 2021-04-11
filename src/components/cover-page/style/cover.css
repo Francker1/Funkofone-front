@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+.cover-msg__container h1{
+    color: var(--main-color);
+}
+
 .cover-img{
     background-image: url("../../../images/funkofone-cover.jpg");
     background-position: initial;

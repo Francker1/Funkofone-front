@@ -1,10 +1,11 @@
 import React from 'react';
+import NavBar from '../navbar/NavBar';
 
 const PhoneList = () => {
   return (
-    <div>
-      <h1>lista de teléfonos</h1>
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 };
 
