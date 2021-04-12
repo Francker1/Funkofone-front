@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Cover from '../components/cover-page/Cover';
+import CreatePhone from '../components/forms/CreatePhone';
 import PhoneList from '../components/products/PhoneList';
 import PhoneScreen from '../components/products/PhoneScreen';
 
@@ -12,7 +13,7 @@ const AppRouter = () => {
         <Route exact path="/phones/" component={PhoneList} />
         <Route exact path="/phones/:id" component={PhoneScreen} />
         <Route exact path="/phones/edit/:id" />
-        <Route exact path="/new/" />
+        <Route exact path="/new/" component={CreatePhone} />
         <Redirect to="/" />
       </Switch>
     </Router>

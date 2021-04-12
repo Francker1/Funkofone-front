@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Col, Card } from 'react-bootstrap';
 
 import './style/phone-card.css';
 import BtnLinkDefault from '../buttons/default/BtnLinkDefault';
 
-const PhoneCard = (props) => {
+const PhoneCard = () => {
   return (
     <Col sm={4} className="mb-5">
       <Card className="shadow border-0">
@@ -18,7 +18,12 @@ const PhoneCard = (props) => {
         </Card.Body>
         <div className="d-flex mb-3 card-buttons">
           <Col sm={6}>
-            <BtnLinkDefault url="/phones/edit/15" text="Edit" className="btn w-100" outlined />
+            <BtnLinkDefault
+              url="/phones/edit/15"
+              text="Edit"
+              className="btn w-100"
+              outlined="true"
+            />
           </Col>
           <Col sm={6}>
             <BtnLinkDefault url="/phones/15" text="Details" className="btn w-100" />
@@ -32,6 +37,6 @@ const PhoneCard = (props) => {
   );
 };
 
-PhoneCard.propTypes = {};
+// PhoneCard.propTypes = {};
 
 export default PhoneCard;

@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import NavBar from '../navbar/NavBar';
 
@@ -70,6 +70,6 @@ const PhoneScreen = ({ history }) => {
   );
 };
 
-PhoneScreen.propTypes = {};
+// PhoneScreen.propTypes = {};
 
 export default PhoneScreen;

@@ -6,7 +6,6 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
-        "plugin:react/recommended",
         "prettier"
     ],
     "parser": "babel-eslint",
@@ -32,6 +31,9 @@
                 ]
             }
         ],
-        "react/state-in-constructor": "off"
+        "react/state-in-constructor": "off",
+        "react/prop-types": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+        "jsx-a11y/label-has-for": 0
     }
 }
