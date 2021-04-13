@@ -5,7 +5,8 @@
     right: 0;
     margin: 5px;
     padding: 5px;
-    background: orange;
+    color: var(--white-color);
+    background-color: var(--main-color);
     border-radius: 2px;
 }
 

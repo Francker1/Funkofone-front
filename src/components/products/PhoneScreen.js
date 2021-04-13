@@ -1,12 +1,31 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import NavBar from '../navbar/NavBar';
+import Spinner from '../spinner/Spinner';
+import { useFetchPhones } from '../../hooks/useFetchPhones';
+import BtnLinkDefault from '../buttons/default/BtnLinkDefault';
 
 import './style/phone-detail.css';
 
 const PhoneScreen = ({ history }) => {
+  const { id } = useParams();
+  const { data: phone, loading } = useFetchPhones(id);
+
+  const {
+    _id,
+    name,
+    manufacturer,
+    detail,
+    price,
+    image,
+    ram,
+    size,
+    screen,
+    processor,
+    color,
+  } = phone;
+
   const handleReturn = () => {
     if (history.length <= 2) {
       history.push('/');
@@ -29,38 +48,45 @@ const PhoneScreen = ({ history }) => {
         </Row>
 
         <Container className="detail-container | p-2 p-sm-5">
+          {loading && <Spinner />}
+
           <Row>
             <Col md={6}>
               <div className="relative">
-                <Image src="https://picsum.photos/id/237/450/450" fluid />
+                <Image src={image} fluid />
               </div>
             </Col>
             <Col md={6}>
               <div>
-                <h6>Apple</h6>
-                <h2 className="mb-4">iPhone 7</h2>
-                <p className="text-sm">
-                  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit . lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit
-                </p>
-                <p>Current price: 50,00 €</p>
+                <h6>{manufacturer}</h6>
+                <h2 className="mb-4">{name}</h2>
+                <p className="text-sm">{detail}</p>
+                <p>Current price: {price} €</p>
               </div>
               <div className="mb-2">
                 <dl>
                   <dt>Technical specifications</dt>
-                  <dd>RAM: 8 gb</dd>
-                  <dd>Size: 30cm</dd>
-                  <dd>Screen: 4,7 inch IPS</dd>
-                  <dd>Processor: A10 Fusion</dd>
+                  <dd>RAM: {ram}</dd>
+                  <dd>Size: {size}</dd>
+                  <dd>Screen: {screen}</dd>
+                  <dd>Processor: {processor}</dd>
                 </dl>
               </div>
               <div>
-                <p>Colors: black...</p>
+                <p>Colors: {color}</p>
               </div>
-              <div>
-                <button type="button">Edit</button>
-                <button type="button">Delete</button>
+              <div className="row">
+                <div className="col-6">
+                  <BtnLinkDefault
+                    url={`/phones/edit/${_id}`}
+                    text="Edit"
+                    className="btn w-100"
+                    outlined="true"
+                  />
+                </div>
+                <div className="col-6">
+                  <button type="button">Delete</button>
+                </div>
               </div>
             </Col>
           </Row>
@@ -69,7 +95,5 @@ const PhoneScreen = ({ history }) => {
     </>
   );
 };
-
-// PhoneScreen.propTypes = {};
 
 export default PhoneScreen;

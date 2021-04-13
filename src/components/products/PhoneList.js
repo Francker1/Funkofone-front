@@ -2,10 +2,14 @@ import React from 'react';
 import { Container, Row, Col, CardDeck } from 'react-bootstrap';
 import NavBar from '../navbar/NavBar';
 import PhoneCard from './PhoneCard';
+import Spinner from '../spinner/Spinner';
+import { useFetchPhones } from '../../hooks/useFetchPhones';
 
 import './style/phone-list.css';
 
 const PhoneList = () => {
+  const { data: phones, loading } = useFetchPhones();
+
   return (
     <>
       <NavBar />
@@ -18,10 +22,11 @@ const PhoneList = () => {
         <Row>
           <Col>
             <CardDeck>
-              <PhoneCard />
-              <PhoneCard />
-              <PhoneCard />
-              <PhoneCard />
+              {loading && <Spinner />}
+
+              {phones.map((phone) => (
+                <PhoneCard key={phone._id} {...phone} />
+              ))}
             </CardDeck>
           </Col>
         </Row>
