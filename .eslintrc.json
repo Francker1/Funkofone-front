@@ -1,44 +1,39 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "prettier"
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "prettier"
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
     ],
-    "rules": {
-        "prettier/prettier": "error",
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
-            }
-        ],
-        "react/state-in-constructor": "off",
-        "react/prop-types": 0,
-        "react/jsx-props-no-spreading": "off",
-        "react/jsx-one-expression-per-line": 0,
-        "jsx-a11y/label-has-associated-control": 0,
-        "jsx-a11y/label-has-for": 0,
-        "import/prefer-default-export": 0,
-        "no-underscore-dangle": 0,
-        "no-unused-vars": "warn"
-    }
+    "react/state-in-constructor": "off",
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "import/prefer-default-export": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-vars": "warn"
+  }
 }
