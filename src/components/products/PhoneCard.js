@@ -7,7 +7,7 @@ import BtnLinkDefault from '../buttons/default/BtnLinkDefault';
 
 const PhoneCard = ({ _id, manufacturer, name, color, price, model, image }) => {
   return (
-    <Col sm={4} className="mb-5">
+    <Col sm={6} lg={4} className="mb-5">
       <Card className="shadow border-0">
         <Card.Img variant="top" src={image} height="230" />
         <h6 className="card-maker">{manufacturer}</h6>

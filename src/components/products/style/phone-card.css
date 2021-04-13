@@ -4,10 +4,10 @@
     position: absolute;
     right: 0;
     margin: 5px;
-    padding: 5px;
+    padding: 4px 6px;
     color: var(--white-color);
     background-color: var(--main-color);
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .card-body{

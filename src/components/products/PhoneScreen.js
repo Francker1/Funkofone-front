@@ -1,12 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+
 import NavBar from '../navbar/NavBar';
 import Spinner from '../spinner/Spinner';
 import { useFetchPhones } from '../../hooks/useFetchPhones';
 import BtnLinkDefault from '../buttons/default/BtnLinkDefault';
+import { api } from '../../helpers/methodsPhone';
+import ModalFunkoFone from '../ui/modals/Modal';
 
-import './style/phone-detail.css';
+import './style/phone-screen.css';
 
 const PhoneScreen = ({ history }) => {
   const { id } = useParams();
@@ -34,6 +37,20 @@ const PhoneScreen = ({ history }) => {
     }
   };
 
+  const onHandleRemove = async () => {
+    try {
+      const resp = await api.deletePhone(_id);
+
+      setTimeout(() => {
+        history.push('/phones');
+      }, 1500);
+
+      return resp;
+    } catch (e) {
+      return e;
+    }
+  };
+
   return (
     <>
       <NavBar />
@@ -47,7 +64,7 @@ const PhoneScreen = ({ history }) => {
           </Col>
         </Row>
 
-        <Container className="detail-container | p-2 p-sm-5">
+        <Container className="detail-container shadow-lg | p-2 p-sm-5">
           {loading && <Spinner />}
 
           <Row>
@@ -85,7 +102,7 @@ const PhoneScreen = ({ history }) => {
                   />
                 </div>
                 <div className="col-6">
-                  <button type="button">Delete</button>
+                  <ModalFunkoFone id={_id} method={onHandleRemove} />
                 </div>
               </div>
             </Col>

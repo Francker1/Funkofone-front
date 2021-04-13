@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import NavBar from '../navbar/NavBar';
-import { createPhone } from '../../helpers/createPhone';
+import { api } from '../../helpers/methodsPhone';
 
 const CreatePhone = () => {
   const [ui, setUi] = useState({
@@ -42,7 +42,7 @@ const CreatePhone = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const resp = await createPhone(formValues);
+    const resp = await api.createPhone(formValues);
 
     // Handle also error response and set new message
     // Set message to ui, but also is possible reset form or change disabled status to button Create
