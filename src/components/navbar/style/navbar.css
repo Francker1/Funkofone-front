@@ -1,19 +1,30 @@
 nav {
-    background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
-nav a:hover{
-    text-decoration: none;
-    color: var(--accent-color);
+nav a:hover {
+  text-decoration: none;
+  color: var(--accent-color);
 }
 
-.funko-nav_brand a{
+.funko-nav_brand a {
+  color: var(--white-color);
+  transition: 0.2s;
+}
 
-    color: var(--white-color);
-    transition: 0.2s;
-} 
+.funko-nav_brand a {
+  font-size: 1.3rem;
+}
 
-.funko-nav_brand a{
+.funko-nav_user {
+  color: var(--white-color);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 
-    font-size: 1.3rem;
+@media (min-width: 768px) {
+  .funko-nav_user {
+    margin-bottom: 0;
+    align-self: center;
+  }
 }
