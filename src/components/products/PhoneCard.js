@@ -9,7 +9,7 @@ const PhoneCard = ({ _id, manufacturer, name, color, price, model, image }) => {
   return (
     <Col sm={6} lg={4} className="mb-5">
       <Card className="shadow border-0">
-        <Card.Img variant="top" src={image} height="230" />
+        <Card.Img variant="top" src={image} height="230" alt={name} />
         <h6 className="card-maker">{manufacturer}</h6>
         <Card.Body>
           <h4>{name}</h4>
