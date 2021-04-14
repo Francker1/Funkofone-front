@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in PhoneCard component should render the component correctly 1`] = `
+<Col
+  className="mb-5"
+  lg={4}
+  sm={6}
+>
+  <Card
+    body={false}
+    className="shadow border-0"
+  >
+    <CardImg
+      alt="iPhone 11"
+      height="230"
+      src="http://example.img"
+      variant="top"
+    />
+    <h6
+      className="card-maker"
+    >
+      Apple
+    </h6>
+    <CardBody>
+      <h4>
+        iPhone 11
+      </h4>
+      <p>
+        color: 
+        red
+      </p>
+      <h5>
+        10
+         €
+      </h5>
+    </CardBody>
+    <div
+      className="d-flex mb-3 card-buttons"
+    >
+      <Col
+        sm={6}
+      >
+        <BtnLinkDefault
+          className="btn w-100"
+          outlined="true"
+          text="Edit"
+          url="/phones/edit/01"
+        />
+      </Col>
+      <Col
+        sm={6}
+      >
+        <BtnLinkDefault
+          className="btn w-100"
+          outlined=""
+          text="Details"
+          url="/phones/01"
+        />
+      </Col>
+    </div>
+    <CardFooter>
+      <small
+        className="text-muted"
+      >
+        Model: 
+        ASD
+      </small>
+    </CardFooter>
+  </Card>
+</Col>
+`;
