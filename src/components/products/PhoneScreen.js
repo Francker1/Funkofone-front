@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import NavBar from '../navbar/NavBar';
@@ -59,8 +59,11 @@ const PhoneScreen = ({ history }) => {
           <Col className="mb-4">
             <h1>Phone Detail 📱</h1>
             <button onClick={handleReturn} className="btn" type="button">
-              Back
+              👈 Back
             </button>
+            <Link to="/phones" className="btn">
+              📞 See all phones
+            </Link>
           </Col>
         </Row>
 
