@@ -1,8 +1,13 @@
 export const getPhones = async (id = '') => {
-  const url = `http://localhost:9000/apiv1/phones/${id}`;
+  try {
+    // url can be in environment variables
+    const url = `http://localhost:9000/apiv1/phones/${id}`;
 
-  const resp = await fetch(url);
-  const phones = await resp.json();
+    const resp = await fetch(url);
+    const phones = await resp.json();
 
-  return phones;
+    return phones;
+  } catch (e) {
+    return e;
+  }
 };
