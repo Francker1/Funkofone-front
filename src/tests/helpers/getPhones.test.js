@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { getPhones } from '../../helpers/getPhones';
 
 describe('Test in fetch Phones helpers', () => {

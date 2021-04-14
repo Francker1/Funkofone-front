@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in Create Form component should render component correctly 1`] = `
+<Fragment>
+  <NavBar />
+  <Container
+    className="list-container"
+    fluid={false}
+  >
+    <Row
+      noGutters={false}
+    >
+      <Col
+        className="mb-4"
+      >
+        <h1>
+          Create Phone
+        </h1>
+        <Link
+          to="/phones"
+        >
+          Back to All Phones
+        </Link>
+      </Col>
+    </Row>
+    <Row
+      noGutters={false}
+    >
+      <Col>
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="form-row"
+          >
+            <div
+              className="form-group col-md-6"
+            >
+              <label
+                htmlFor="phoneName"
+              >
+                Phone name
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneName"
+                name="name"
+                onChange={[Function]}
+                placeholder="Phone name"
+                required={true}
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-6"
+            >
+              <label
+                htmlFor="phonePrice"
+              >
+                Price
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phonePrice"
+                name="price"
+                onChange={[Function]}
+                placeholder="Phone price"
+                required={true}
+                type="number"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-row"
+          >
+            <div
+              className="form-group col-md-4"
+            >
+              <label
+                htmlFor="phoneManufacturer"
+              >
+                Manufacturer
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneManufacturer"
+                name="manufacturer"
+                onChange={[Function]}
+                placeholder="Phone manufacturer"
+                required={true}
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-4"
+            >
+              <label
+                htmlFor="phoneModel"
+              >
+                Model
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneModel"
+                name="model"
+                onChange={[Function]}
+                placeholder="Phone model"
+                required={true}
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-4"
+            >
+              <label
+                htmlFor="phoneColor"
+              >
+                Color
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneColor"
+                name="color"
+                onChange={[Function]}
+                placeholder="Phone color"
+                required={true}
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-row"
+          >
+            <div
+              className="form-group col"
+            >
+              <label
+                htmlFor="phoneDetail"
+              >
+                Detail
+              </label>
+              <textarea
+                autoComplete="off"
+                className="form-control"
+                id="phoneDetail"
+                name="detail"
+                onChange={[Function]}
+                placeholder="Phone detail"
+                required={true}
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            className="form-row"
+          >
+            <div
+              className="form-group col-md-3"
+            >
+              <label
+                htmlFor="phoneRam"
+              >
+                RAM
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneRam"
+                name="ram"
+                onChange={[Function]}
+                placeholder="RAM"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-3"
+            >
+              <label
+                htmlFor="phoneSize"
+              >
+                Size
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneSize"
+                name="size"
+                onChange={[Function]}
+                placeholder="Phone size"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-3"
+            >
+              <label
+                htmlFor="phoneScreen"
+              >
+                Screen
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneScreen"
+                name="screen"
+                onChange={[Function]}
+                placeholder="Phone screen"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="form-group col-md-3"
+            >
+              <label
+                htmlFor="phoneProcessor"
+              >
+                Processor
+              </label>
+              <input
+                autoComplete="off"
+                className="form-control"
+                id="phoneProcessor"
+                name="processor"
+                onChange={[Function]}
+                placeholder="Phone processor"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Create
+          </button>
+        </form>
+      </Col>
+    </Row>
+  </Container>
+</Fragment>
+`;
