@@ -59,6 +59,20 @@ export const api = {
       return err;
     }
   },
+
+  editPhone: async (id, data) => {
+    try {
+      const params = JSON.stringify(data);
+
+      const response = await axios.put(`${URL}/${id}`, params, {
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      return response;
+    } catch (err) {
+      return err;
+    }
+  },
 };
 
 export default api;

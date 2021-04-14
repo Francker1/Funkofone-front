@@ -19,34 +19,37 @@ const EditPhone = () => {
 
   // Also, is possible no use a customHook and create a form like this:
 
+  // 1. get data (is possible another user is editing the same phone, so, is better get data from database)
   const fetchData = async () => {
     const res = await getPhones(idPhone);
     setData(res);
   };
 
+  // 2. when component creates, fetch data from database
   useEffect(() => {
     fetchData();
   }, []);
+
+  // 3. set new data from input
 
   const handleEditChange = ({ target }) => {
     setData({ ...data, [target.name]: target.value });
   };
 
+  // 4. returns a message based on the method's response
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const resp = await api.createPhone(formValues);
+    const resp = await api.editPhone(idPhone, data);
 
     // Handle also error response and set new message
     // Set message to ui, but also is possible reset form or change disabled status to button Create
-    // if (resp.status === 201) {
-    setUi({
-      message: `Phone created!!`,
-      id: 200,
-    });
-    // }
-
-    console.log(data);
+    if (resp.status === 200) {
+      setUi({
+        message: `Phone edited!!`,
+        id: resp.data._id,
+      });
+    }
   };
 
   return (
@@ -190,7 +193,7 @@ const EditPhone = () => {
                     placeholder="Phone screen"
                     autoComplete="off"
                     onChange={handleEditChange}
-                    value={'esta' || ''}
+                    value={data.screen || ''}
                   />
                 </div>
 
